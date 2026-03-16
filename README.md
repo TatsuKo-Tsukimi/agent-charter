@@ -1,12 +1,14 @@
 # openclaw-skills
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-5-orange)](https://github.com/TatsuKo-Tsukimi/openclaw-skills)
+[![Skills](https://img.shields.io/badge/skills-5-orange)](https://github.com/TatsuKo-Tsukimi/agent-charter)
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-compatible-blue)](https://openclaw.ai)
 
-**OpenClaw agent skills for workflow governance, safety, and efficiency.**
+> **Most skills extend what your agent CAN do. These define what it SHOULD do — before it starts.**
 
-These skills are framework-level patterns — not platform integrations. They define *how your agent thinks and operates*, not what it connects to. Each one solves a real problem that shows up when running a local AI assistant long-term.
+A pre-flight governance layer for OpenClaw agents. Five skills that form a complete decision stack: task routing, safe execution, token discipline, incremental harness evolution, and filesystem boundary readiness.
+
+No API keys. No external services. Pure behavioral protocols.
 
 ---
 
@@ -64,7 +66,11 @@ Read-only analysis that classifies your path dependencies (inside vs outside wor
 
 ## Why these exist
 
-Most OpenClaw skills are integrations (Spotify, Notion, email, etc.). These are different — they're about the **constitutional layer** of your agent: how it decides what to work on, how it handles risk, how it manages context, and how it evolves its own harness safely.
+Most OpenClaw skills are integrations — Spotify, Notion, email, APIs. These are different.
+
+They're about the **governance layer**: how your agent decides what to work on, how it handles risk, how it manages context, and how it evolves safely. They intervene *before* execution, not during.
+
+→ See [OVERVIEW.md](OVERVIEW.md) for how the 5 skills connect as a decision chain.
 
 ---
 
