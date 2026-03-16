@@ -24,9 +24,17 @@ Each of these is a **pre-flight failure** — something that goes wrong before t
 These 5 skills form a layered governance stack. They're designed to work together:
 
 ```
-New task arrives
+[Periodic: every 3–7 days]
        │
        ▼
+┌─────────────────┐
+│ memory-hygiene  │  ← Promote daily logs → MEMORY.md. Prune stale. Archive old.
+│                 │     Keeps context load manageable across sessions.
+└────────┬────────┘
+         │
+New task arrives
+         │
+         ▼
 ┌─────────────────┐
 │  lane-router    │  ← Is this a workspace task or a system/runtime task?
 │                 │     Project Lane (default) or Ops Lane (explicit only)

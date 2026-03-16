@@ -1,7 +1,7 @@
 # agent-charter
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-5-orange)](https://github.com/TatsuKo-Tsukimi/agent-charter)
+[![Skills](https://img.shields.io/badge/skills-6-orange)](https://github.com/TatsuKo-Tsukimi/agent-charter)
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-compatible-blue)](https://openclaw.ai)
 [![Release](https://img.shields.io/github/v/release/TatsuKo-Tsukimi/agent-charter)](https://github.com/TatsuKo-Tsukimi/agent-charter/releases)
 
@@ -58,8 +58,9 @@ You want to tighten filesystem access by enabling `workspaceOnly=true`. `workspa
 | [`token-efficiency`](token-efficiency/) | Throughout execution | Context bloat, cost waste |
 | [`safe-harness-change`](safe-harness-change/) | Any harness edit | Scope creep, breakage |
 | [`workspaceonly-preflight`](workspaceonly-preflight/) | Before config tightening | Surprise workflow breaks |
+| [`memory-hygiene`](memory-hygiene/) | Periodic maintenance | Stale memory, bloated context |
 
-→ See [OVERVIEW.md](OVERVIEW.md) for how the five skills connect as a decision chain.  
+→ See [OVERVIEW.md](OVERVIEW.md) for how the six skills connect as a decision chain.  
 → See [FAQ.md](FAQ.md) for: why not a system prompt, why skills over policy files, safety vs productivity.
 
 ---
@@ -114,10 +115,17 @@ OpenClaw auto-detects and loads skills from the workspace `skills/` directory on
 
 ---
 
+### [`memory-hygiene`](memory-hygiene/)
+
+Structured memory maintenance. Reviews recent daily logs, distills entries worth keeping into long-term memory, archives old files, and keeps `MEMORY.md` under control. Prevents the twin failures of "can't find anything" (too scattered) and "context too large" (nothing pruned).
+
+**Best for:** Anyone running a persistent OpenClaw agent with daily memory logs that need periodic curation.
+
+---
+
 ## Roadmap
 
-- `memory-hygiene` — promote daily logs to long-term memory, prune stale context
-- `session-discipline` — lightweight session start/end protocol (lighter than pm-safe-core)
+- `session-discipline` — lightweight session start/end protocol for everyday use
 
 ---
 
